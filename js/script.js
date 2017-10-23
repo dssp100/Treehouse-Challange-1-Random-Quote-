@@ -16,11 +16,13 @@ function getRamdomQuote(){
 // change the background color of the page randomly by calling the "changeBackgroundColor()" function.
 
 function printQuote() {
+    
     var randomQuote = getRamdomQuote()
     htmlQuoteString = '<p class="quote">' + randomQuote.quote + '</p>' +
     '<p class="source">' + randomQuote.source +
         '<span class="citation">' + randomQuote.citation + '</span>' +
-        '<span class="year">' + randomQuote.year + '</span>'
+        '<span class="year">' + randomQuote.year + '</span>' +
+        '<span class="tag">' + randomQuote.tag + '</span>' +
     '</p>'
     document.getElementById('quote-box').innerHTML = htmlQuoteString
     changeBackgroundColor()
@@ -36,5 +38,6 @@ function changeBackgroundColor(){
     document.body.style.background = rgbColor; 
 }
 
+// 
 
 
